@@ -1,0 +1,1 @@
+SELECT u.user_id, u.username, t.training_id, t.training_date, COUNT(*) AS count FROM User u, Training_details t WHERE t.user_id = u.user_id GROUP BY u.user_id, u.username, t.training_id, t.training_date having COUNT(*) > 1 ORDER BY training_date DESC;
